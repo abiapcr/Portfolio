@@ -17,31 +17,80 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav_content a");
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+        });
 
-    entries.forEach(entry => {
+        const activeLink = document.querySelector(
+          `.nav_content a[href="#${entry.target.id}"]`,
+        );
 
-        if (entry.isIntersecting) {
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-            });
-
-            const activeLink = document.querySelector(
-                `.nav_content a[href="#${entry.target.id}"]`
-            );
-
-            if (activeLink) {
-                activeLink.classList.add("active");
-            }
+        if (activeLink) {
+          activeLink.classList.add("active");
         }
-
+      }
     });
+  },
+  {
+    threshold: 0.5,
+  },
+);
 
-}, {
-    threshold: 0.5
+sections.forEach((section) => {
+  observer.observe(section);
 });
 
-sections.forEach(section => {
-    observer.observe(section);
+
+
+const btnProjetos = document.getElementById("btn_projetos");
+const btnCertificados = document.getElementById("btn_certificados");
+const btnStack = document.getElementById("btn_stack");
+
+const conteudoProjetos = document.getElementById("conteudo_projetos");
+const conteudoCertificados = document.getElementById("conteudo_certificados");
+const conteudoStack = document.getElementById("conteudo_stack");
+
+btnProjetos.classList.add("ativo");
+
+function removerAtivo(){
+    btnProjetos.classList.remove("ativo");
+    btnCertificados.classList.remove("ativo");
+    btnStack.classList.remove("ativo");
+}
+
+
+
+btnCertificados.addEventListener("click", function () {
+
+    removerAtivo();
+
+    conteudoProjetos.style.display = "none";
+    conteudoCertificados.style.display = "grid";
+    conteudoStack.style.display = "none";
+
+    btnCertificados.classList.add("ativo");
+});
+
+btnStack.addEventListener("click", function(){
+
+    removerAtivo();
+    conteudoCertificados.style.display = "none";
+    conteudoProjetos.style.display = "none";
+    conteudoStack.style.display = "grid";
+
+    btnStack.classList.add("ativo");
+});
+
+btnProjetos.addEventListener("click", function(){
+
+    removerAtivo();
+    conteudoCertificados.style.display = "none";
+    conteudoProjetos.style.display = "grid";
+    conteudoStack.style.display = "none";
+
+    btnProjetos.classList.add("ativo");
 });

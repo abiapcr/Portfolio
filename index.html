@@ -66,90 +66,174 @@
     <div class="sobre_container">
       <div class="texto_sobre">
         <p>
-          Meu nome é Ana Beatriz Porcaro, tenho 18 anos e sou
-          estudante de Análise e Desenvolvimento de Sistemas
-          no Instituto Federal de São Paulo (IFSP).
+          Meu nome é Ana Beatriz Porcaro, tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de São Paulo (IFSP).
         </p>
         <p>
-          Tenho interesse em tecnologia desde a infância e,
-          ao longo do tempo, descobri na programação uma área
-          na qual quero construir minha carreira.
-        </p>
-        <p>
-          Atualmente, venho desenvolvendo meus conhecimentos
-          em HTML, CSS e JavaScript, além de buscar
-          constantemente aprender novas tecnologias.
+          Tenho interesse em tecnologia desde a infância e, ao longo do tempo, descobri na programação uma área na qual desejo construir minha carreira. Atualmente, busco desenvolver meus conhecimentos por meio de estudos e projetos práticos, sempre procurando aprender e explorar novas possibilidades na área de tecnologia.
         </p>
       </div>
 
       <div class="sobre_cards">
         <div class="sobre_card">
           <h2>🎓 FORMAÇÃO</h2>
-          <p>Análise e Desenvolvimento de Sistemas - IFSP</p>
-        </div>
-
-        <div class="sobre_card">
-          <h2>💻 TECNOLOGIAS</h2>
-          <p>HTML • CSS • JavaScript</p>
+          <p>Análise e Desenvolvimento de Sistemas<br> Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP)</p>
         </div>
 
         <div class="sobre_card">
           <h2>🚀 OBJETIVO</h2>
-          <p>Primeira oportunidade de estágio em tecnologia</p>
+          <p>Busco minha primeira oportunidade de estágio na área de tecnologia, onde possa aplicar meus conhecimentos,
+            desenvolver novas habilidades e adquirir experiência profissional.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section id="portfolio">
-    <h1 class="aba">PORTFÓLIO</h1>
+  <h1 class="aba">PORTFÓLIO</h1>
 
-    <div class="portfolio_abas">
-      <button>Projetos</button>
-      <button>Certificados</button>
-      <button> Stack Tecnológica</button>
+  <div class="portfolio_abas">
+    <button id="btn_projetos">Projetos</button>
+    <button id="btn_certificados">Certificados</button>
+    <button id="btn_stack">Stack Tecnológica</button>
+  </div>
+
+
+  <!-- PROJETOS -->
+
+  <div id="conteudo_projetos" class="portfolio_conteudo">
+
+    <div class="projeto_card">
+
+      <div class="projeto_imagem">
+        <img src="images/projeto1.png" alt="Imagem do meu projeto">
+      </div>
+
+      <div class="projeto_info">
+
+        <h2>Portfólio</h2>
+        <p>
+          Site pessoal desenvolvido para apresentar meus projetos e conhecimentos.<br>
+          HTML | CSS | JavaScript
+        </p>
+
+        <a href="https://github.com/abiapcr/Portfolio" target="_blank">
+          GitHub
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://abiapcr.github.io/Portfolio/" target="_blank">
+          Ver Projeto
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
     </div>
 
-      <div class="portfolio_conteudo">
 
-        <div class="projeto_card">
+    <div class="projeto_card">
 
-          <div class="projeto_imagem">
-          <img src="images/projeto1.png" alt="Imagem do meu projeto">
-          </div>
+      <div class="projeto_imagem">
+        <img src="images/projeto2.png" alt="Imagem do meu projeto">
+      </div>
 
-          <div class="projeto_info">
-            <h2>Portfólio</h2>
-            <p>Portfólio Pessoal</p>
-            <a href="#" target="_blank"> Ver Projeto</a>
-          </div>
-        </div>
+      <div class="projeto_info">
+        <h2>Meu segundo projeto</h2>
 
-        <div class="projeto_card">
-          <div class="projeto_imagem">
-          <img src="images/projeto2.png" alt="Imagem do meu projeto">
-          </div>
+        <p>Descrição do meu projeto</p>
 
-          <div class="projeto_info">
-            <h2>Meu segundo projeto</h2>
-            <p>Descrição do meu projeto</p>
-            <a href="#" target="_blank"> Ver Projeto</a>
-          </div>
-        </div>
+        <a href="#" target="_blank">
+          GitHub
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
 
-        <div class="projeto_card">
-          <div class="projeto_imagem">
-          <img src="images/projeto3.png" alt="Imagem do meu projeto">
-          </div>
-          
-          <div class="projeto_info">
-            <h2>Meu terceiro projeto</h2>
-            <p>Descrição do meu projeto</p>
-            <a href="#" target="_blank"> Ver Projeto</a>
-          </div>
-        </div>
+        <a href="#" target="_blank">
+          Ver Projeto
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
     </div>
-  </section>
+
+
+    <div class="projeto_card">
+
+      <div class="projeto_imagem">
+        <img src="images/projeto3.png" alt="Imagem do meu projeto">
+      </div>
+
+      <div class="projeto_info">
+        <h2>Meu terceiro projeto</h2>
+
+        <p>Descrição do meu projeto</p>
+
+        <a href="#" target="_blank">
+          GitHub
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="#" target="_blank">
+          Ver Projeto
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CERTIFICADOS -->
+
+  <div id="conteudo_certificados" class="portfolio_conteudo">
+
+    <div class="projeto_card">
+
+      <h2>HTML Essentials</h2>
+
+      <p>Cisco Networking Academy</p>
+
+      <a href="pdf/HTML_Essentials_certificate_ana-porcaro-aluno-ifsp-edu-br_db5e85b2-a8fc-4ba6-bd77-f4c804510a7d.pdf" target="_blank">
+        Ver certificado
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- STACK TECNOLÓGICA -->
+
+  <div id="conteudo_stack" class="portfolio_conteudo">
+
+    <div class="tecnologia_card">
+      <i class="fa-brands fa-html5"></i>
+      <h2>HTML</h2>
+    </div>
+
+    <div class="tecnologia_card">
+      <i class="fa-brands fa-css3-alt"></i>
+      <h2>CSS</h2>
+    </div>
+
+    <div class="tecnologia_card">
+      <i class="fa-brands fa-js"></i>
+      <h2>JavaScript</h2>
+    </div>
+
+    <div class="tecnologia_card">
+      <i class="fa-brands fa-git-alt"></i>
+      <h2>Git</h2>
+    </div>
+
+    <div class="tecnologia_card">
+      <i class="fa-brands fa-github"></i>
+      <h2>GitHub</h2>
+    </div>
+
+  </div>
+
+</section>
 
   <section id="contatos">
     <h1 class="aba">CONTATO</h1>
@@ -181,7 +265,7 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
