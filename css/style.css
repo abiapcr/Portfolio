@@ -1,0 +1,362 @@
+body {
+    background: linear-gradient(to right, #222, #333);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tudo da seção Início */
+#inicio{
+    padding: 100px 80px;
+}
+
+/* Título principal */
+.titulo{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+/* Título Ana Beatriz */
+.titulo h1 span {
+    color: #8a2be2;
+    text-shadow: none;
+    font-size: 80px;
+}
+
+/* Descrição embaixo do Titulo na seção Início */
+.descricao{
+    font-size: 30px;
+    font-family: 'Courier New', monospace;
+}
+
+/* IFSP */
+.descricao span {
+    color:#8a2be2;
+    text-shadow: 0 0 30px #8a2be2;
+}
+
+
+/* Todo o conteudo da seção Início, ex: Titulo, Imagem... */
+.inicio_conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 150px;
+}
+
+
+/* Ícone do Currículo */
+.botao img {
+    width: 30px;
+    height: 30px;
+}
+
+/* O bloco da minha foto de perfil */
+.imagem{
+    position: relative;
+    right: 200px;
+    top: 50px;
+}
+
+/* A imagem da minha foto de perfil */
+.imagem img{
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #8a2be2;
+    border: 2px solid #8a2be2;
+    border-color: #8a2be2;
+}
+
+
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.botoes a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.botoes i {
+    font-size: 40px;
+    color: #8a2be2;
+    text-shadow: none;
+    filter: none;
+}
+
+.botoes i:hover {
+    filter: drop-shadow(0 0 15px #8a2be2);
+}
+
+
+/* Portfólio no começo da navegação */
+.capa{
+    color: #222;
+    font-size: 35px;
+    text-shadow: 0 0 50px #8a2be2;
+    -webkit-text-stroke: 2px #8a2be2;
+}
+
+/* Navegação Inteira*/
+.nav_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #222;
+} 
+
+/* Navegação Links */
+.nav_content ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Links */
+.nav_content a{
+    color: white;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+
+/* Mouse em cima */
+.nav_content a:hover {
+    border-color: #8a2be2;
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+/* Opção selecionada */
+.nav_content a.active {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+/* Barra horizontal embaixo da navegação */
+hr {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    border: none;
+    background-color: #8a2be2;
+    box-shadow: 0 0 30px #8a2be2;
+}
+
+
+
+/* Cada seção da página, ex: sobre mim/portfolio/contato... */
+.aba {
+    color: white;
+    text-shadow: 0 0 30px #8a2be2;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+
+
+/* Tudo da seção Sobre mim */
+#sobre {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Texto da seção Sobre mim */
+.texto_sobre{
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    width: 50%;
+}
+
+.sobre_container{
+    display: flex;
+    gap: 50px;
+    width: 80%;
+}
+
+/* Grupo 3 cards */
+.sobre_cards{
+    width: 50%;
+}
+
+/* Cada card */
+.sobre_card{
+    color: white;
+    background-color: #222;
+    border: 1px solid #8a2be2;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.sobre_card:hover{
+    border-color: #8a2be2;
+    box-shadow: 0 0 30px #8a2be2;
+}
+
+
+
+.portfolio_conteudo{
+    width: 80%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portfolio_abas{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio_abas button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.portfolio_abas button:hover{
+    border-color: #8a2be2;
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+
+.projeto_card{
+    background-color: #292929;
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.projeto_card:hover{
+    border-color: #8a2be2;
+    box-shadow: 0 0 20px #8a2be2;
+    transform: translateY(-8px);
+}
+
+.projeto_card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.projeto_imagem{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.projeto_imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.projeto_card:hover .projeto_imagem img{
+    transform: scale(1.05);
+}
+
+.projeto_info{
+    padding: 20px;
+}
+
+.projeto_info a{
+    color: #8a2be2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Tudo da seção Contato */
+#contatos {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+/* Links da seção Contato */
+#contatos a{
+    text-decoration: none;
+    color: #8a2be2;
+}
+
+.contatos_descrição{
+    color: #b5b5b5;
+    font-size: 20px;
+    align-items: center;
+}
+
+.contatos_texto{
+    color: white;
+    font-size: 20px
+}
+
+.botoes_contatos{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    transition: 0.3s ease;
+}
+
+.botoes_contatos i {
+    font-size: 40px;
+}
+
+.botoes_contatos i:hover{
+    filter: drop-shadow(0 0 8px #8a2be2);
+}
+
+
+/* Todas as seções do site */
+section {
+    min-height: 100vh;
+    scroll-margin-top: 100px;
+}
+
+/* O arquivo HTML inteiro */
+html{
+    scroll-behavior: smooth;
+}
+
