@@ -1,16 +1,49 @@
-body {
-    background: linear-gradient(to right, #222, #333);
-    font-family: Arial, Helvetica, sans-serif;
+/* MODO ESCURO / MODO CLARO */
+
+:root {
+    --fundo-1: #222;
+    --fundo-2: #292929;
+    --fundo-3: #222;
+    --fundo-4: #292929;
+    --fundo-card: #292929;
+    --borda: #444;
+    --texto: white;
+    --texto-secundario: #b5b5b5;
+    --roxo: #8a2be2;
+    --fundo: #222;
+}
+/* Modo claro */
+
+body.light-mode {
+    --fundo-1: #f5f5f5;
+    --fundo-2: #ffffff;
+    --fundo-3: #f5f5f5;
+    --fundo-4: #ffffff;
+    --fundo-card: #ffffff;
+    --borda: #d0d0d0;
+    --texto: #222;
+    --texto-secundario: #555;
+    --fundo: #f5f5f5;
 }
 
+/* Corpo */
+
+body {
+    margin: 0;
+    background-color: var(--fundo);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 /* Tudo da seção Início */
 #inicio{
     padding: 100px 80px;
+    background-color: var(--fundo-1);
 }
 
 /* Título principal */
 .titulo{
-    color: white;
+    color: var(--texto);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -99,11 +132,11 @@ body {
 
 
 /* Portfólio no começo da navegação */
-.capa{
-    color: #222;
+.capa {
+    color: var(--texto);
     font-size: 35px;
-    text-shadow: 0 0 50px #8a2be2;
-    -webkit-text-stroke: 2px #8a2be2;
+    text-shadow: 0 0 50px var(--roxo);
+    -webkit-text-stroke: 2px var(--roxo);
 }
 
 /* Navegação Inteira*/
@@ -114,14 +147,29 @@ body {
     padding: 20px 50px;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
-    background-color: #222;
-} 
+    z-index: 99999;
+    background-color: var(--fundo-2);
+    transition: top 0.3s ease, background-color 0.3s ease;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--texto);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#theme-toggle:hover{
+    color: var(--roxo);
+    transform: scale(1.1);
+}
 
 /* Navegação Links */
 .nav_content ul{
@@ -133,7 +181,7 @@ body {
 
 /* Links */
 .nav_content a{
-    color: white;
+    color: var(--texto);
     padding: 8px 12px;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -170,7 +218,7 @@ hr {
 
 /* Cada seção da página, ex: sobre mim/portfolio/contato... */
 .aba {
-    color: white;
+    color: var(--texto);
     text-shadow: 0 0 30px #8a2be2;
     text-align: center;
     font-size: 40px;
@@ -181,7 +229,7 @@ hr {
 
 /* Tudo da seção Sobre mim */
 #sobre {
-    background-color: #222;
+    background-color: var(--fundo-2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,7 +238,7 @@ hr {
 
 /* Texto da seção Sobre mim */
 .texto_sobre{
-    color: white;
+    color: var(--texto);
     font-size: 20px;
     line-height: 1.6;
     width: 50%;
@@ -209,8 +257,8 @@ hr {
 
 /* Cada card */
 .sobre_card{
-    color: white;
-    background-color: #222;
+    color: var(--texto);
+    background-color: var(--fundo-card);
     border: 1px solid #8a2be2;
     border-radius: 8px;
     padding: 20px;
@@ -224,6 +272,10 @@ hr {
 }
 
 
+
+#portfolio {
+    background-color: var(--fundo-3);
+}
 
 .portfolio_conteudo{
     width: 80%;
@@ -241,8 +293,8 @@ hr {
 
 .portfolio_abas button{
     background-color: transparent;
-    color: white;
-    border: 1px solid #444;
+    color: var(--texto);
+    border: 1px solid var(--borda);
     border-radius: 8px;
     padding: 15px 30px;
     font-size: 18px;
@@ -262,11 +314,11 @@ hr {
 
 
 .projeto_card{
-    background-color: #292929;
-    border: 1px solid #444;
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
     border-radius: 12px;
     padding: 20px;
-    color: white;
+    color: var(--texto);
     overflow: hidden;
     transition: 0.3s ease;
 }
@@ -322,11 +374,11 @@ hr {
 }
 
 .tecnologia_card{
-    background-color: #292929;
-    border: 1px solid #444;
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
     border-radius: 12px;
     padding: 30px;
-    color: white;
+    color: var(--texto);
     text-align: center;
     transition: 0.3s ease;
 }
@@ -365,7 +417,7 @@ hr {
 
 /* Tudo da seção Contato */
 #contatos {
-    background-color: #222;
+    background-color: var(--fundo-4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -379,14 +431,14 @@ hr {
     color: #8a2be2;
 }
 
-.contatos_descrição{
-    color: #b5b5b5;
+.contatos_descrição {
+    color: var(--texto-secundario);
     font-size: 20px;
     align-items: center;
 }
 
 .contatos_texto{
-    color: white;
+    color: var(--texto);
     font-size: 20px
 }
 
