@@ -1178,17 +1178,18 @@ html{
 /* ================================================= */
 
 section.secao-animada {
-    animation: nenhuma 0s;
+    opacity: 0;
+    transform: translateY(60px);
 }
 
 section.secao-animada.secao-visivel {
-    animation: aparecerSecao 0.8s ease-out;
+    animation: aparecerSecao 0.8s ease-out forwards;
 }
 
 @keyframes aparecerSecao {
 
     from {
-        opacity: 0.3;
+        opacity: 0;
         transform: translateY(60px);
     }
 

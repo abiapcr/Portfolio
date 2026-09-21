@@ -176,19 +176,10 @@ const observadorSecoes = new IntersectionObserver(
 
             if (entrada.isIntersecting) {
 
-                // Reinicia a animação
-                entrada.target.classList.remove("secao-visivel");
-
-                // Força o navegador a atualizar
-                void entrada.target.offsetWidth;
-
-                // Ativa novamente a animação
                 entrada.target.classList.add("secao-visivel");
 
-            } else {
-
-                // Quando sair da tela, prepara para animar novamente
-                entrada.target.classList.remove("secao-visivel");
+                // Para de observar depois da primeira animação
+                observadorSecoes.unobserve(entrada.target);
 
             }
 
@@ -196,7 +187,7 @@ const observadorSecoes = new IntersectionObserver(
 
     },
     {
-        threshold: 0.5
+        threshold: 0.2
     }
 );
 
