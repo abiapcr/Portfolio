@@ -326,7 +326,7 @@ hr {
 .projeto_card:hover{
     border-color: #8a2be2;
     box-shadow: 0 0 20px #8a2be2;
-    transform: translateY(-8px);
+    transform: translateY(-12px);
 }
 
 .projeto_card img{
@@ -386,7 +386,7 @@ hr {
 .tecnologia_card:hover{
     border-color: #8a2be2;
     box-shadow: 0 0 20px #8a2be2;
-    transform: translateY(-8px);
+    transform: translateY(-12px);
 }
 
 .tecnologia_card i{
@@ -446,15 +446,28 @@ hr {
     display: flex;
     justify-content: center;
     gap: 70px;
-    transition: 0.3s ease;
+    transition: 0.4s ease;
 }
 
 .botoes_contatos i {
     font-size: 40px;
 }
 
-.botoes_contatos i:hover{
-    filter: drop-shadow(0 0 8px #8a2be2);
+.botoes_contatos > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.botoes_contatos > a:hover {
+    transform: translateY(-12px) scale(1.12);
+}
+
+.botoes_contatos > a:hover i {
+    filter: drop-shadow(0 0 12px #8a2be2);
 }
 
 
@@ -469,3 +482,612 @@ html{
     scroll-behavior: smooth;
 }
 
+/* ================================================= */
+/* RESPONSIVIDADE - CELULAR */
+/* Não altera o CSS original do desktop */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    /* ========================= */
+    /* GERAL */
+    /* ========================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* ========================= */
+    /* NAVBAR */
+    /* ========================= */
+
+    .nav_content {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 10px;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 5px;
+    }
+
+    .capa {
+        flex-shrink: 0;
+        font-size: 22px;
+    }
+
+    .nav_content ul {
+        flex: 1;
+        min-width: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 2px;
+
+        padding: 0;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .nav_content li {
+        min-width: 0;
+    }
+
+    .nav_content a {
+        display: block;
+
+        font-size: 11px;
+        padding: 6px 4px;
+
+        white-space: nowrap;
+    }
+
+    #theme-toggle {
+        flex-shrink: 0;
+
+        width: 32px;
+        height: 32px;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 18px;
+    }
+
+
+    /* ========================= */
+    /* INÍCIO */
+    /* ========================= */
+
+    #inicio {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 90px 20px 60px;
+
+        overflow: hidden;
+    }
+
+    .inicio_conteudo {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 35px;
+
+        padding-top: 20px;
+    }
+
+    .titulo {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .titulo h1 {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
+
+        line-height: 1;
+    }
+
+    .titulo h1 span {
+        display: inline-block;
+
+        max-width: 100%;
+
+        font-size: clamp(45px, 14vw, 65px);
+
+        overflow-wrap: break-word;
+    }
+
+    .descricao {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        overflow-wrap: break-word;
+    }
+
+    .botoes {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .imagem {
+        position: static !important;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem img {
+        position: static;
+
+        display: block;
+
+        width: min(65vw, 260px);
+        max-width: 100%;
+
+        height: auto;
+
+        margin: 0 auto;
+    }
+
+
+    /* ========================= */
+    /* SOBRE MIM */
+    /* ========================= */
+
+    #sobre {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 90px 20px 60px;
+
+        overflow: hidden;
+    }
+
+    #sobre .aba {
+        width: 100%;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        text-align: center;
+    }
+
+    .sobre_container {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .texto_sobre {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        font-size: 16px;
+        line-height: 1.6;
+
+        text-align: left;
+
+        overflow-wrap: break-word;
+    }
+
+    .sobre_cards {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+    .sobre_card {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        margin-bottom: 15px;
+
+        overflow-wrap: break-word;
+    }
+
+    .sobre_card h2,
+    .sobre_card p {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* ========================= */
+    /* PORTFÓLIO */
+    /* ========================= */
+
+    #portfolio {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        overflow: hidden;
+    }
+
+    #portfolio .aba {
+        text-align: center;
+    }
+
+    .portfolio_abas {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        box-sizing: border-box;
+    }
+
+    .portfolio_abas button {
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .portfolio_conteudo {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 30px auto;
+
+        box-sizing: border-box;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .projeto_card,
+    .tecnologia_card {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .projeto_imagem {
+        width: 100%;
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+    .projeto_imagem img {
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        display: block;
+    }
+
+    .projeto_info {
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
+    }
+
+    .projeto_info h2,
+    .projeto_info p {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* ========================= */
+    /* CONTATO */
+    /* ========================= */
+
+    #contatos {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: auto;
+
+        box-sizing: border-box;
+
+        padding: 90px 15px 70px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+    #contatos .aba {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 0 25px;
+
+        text-align: center;
+    }
+
+    .botoes_contatos {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: flex-start;
+
+        flex-wrap: nowrap;
+
+        gap: 8px;
+
+        box-sizing: border-box;
+    }
+
+    .botoes_contatos > a {
+        width: 25%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        text-align: center;
+
+        overflow: hidden;
+
+        text-decoration: none;
+    }
+
+    .botoes_contatos i {
+        font-size: 35px;
+
+        margin-bottom: 5px;
+    }
+
+    .botoes_contatos .contatos_texto {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 0 3px;
+
+        font-size: 15px;
+        line-height: 1.2;
+
+        text-align: center;
+
+        overflow-wrap: break-word;
+    }
+
+    .botoes_contatos .contatos_descrição {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        font-size: 11px;
+        line-height: 1.3;
+
+        text-align: center;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}
+
+
+/* ================================================= */
+/* CELULARES PEQUENOS */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+
+    .nav_content {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .capa {
+        font-size: 20px;
+    }
+
+    .nav_content ul {
+        gap: 0;
+    }
+
+    .nav_content a {
+        font-size: 10px;
+        padding: 6px 3px;
+    }
+
+    #theme-toggle {
+        width: 30px;
+        height: 30px;
+
+        font-size: 16px;
+    }
+
+
+    /* INÍCIO */
+
+    #inicio {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .inicio_conteudo {
+        padding-top: 10px;
+    }
+
+    .titulo h1 span {
+        font-size: clamp(42px, 14vw, 60px);
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .imagem img {
+        width: min(60vw, 240px);
+    }
+
+
+    /* SOBRE */
+
+    #sobre {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .texto_sobre {
+        font-size: 15px;
+    }
+
+
+    /* PORTFÓLIO */
+
+    #portfolio {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .portfolio_abas button {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+
+    /* CONTATO */
+
+    #contatos {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .botoes_contatos {
+        gap: 3px;
+    }
+
+    .botoes_contatos i {
+        font-size: 30px;
+    }
+
+    .botoes_contatos .contatos_texto {
+        font-size: 12px;
+    }
+
+    .botoes_contatos .contatos_descrição {
+        font-size: 9px;
+    }
+}
