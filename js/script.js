@@ -138,3 +138,72 @@ botaoTema.addEventListener("click", function () {
     }
 
 });
+
+const nome = document.querySelector(".titulo h1 span strong");
+
+const texto = nome.textContent;
+nome.textContent = "";
+
+nome.style.whiteSpace = "nowrap";
+
+texto.split("").forEach((letra, index) => {
+    const span = document.createElement("span");
+
+    span.textContent = letra === " " ? "\u00A0" : letra;
+
+    span.style.opacity = "0";
+    span.style.display = "inline-block";
+    span.style.transform = "translateY(40px)";
+
+    span.style.animation = `aparecerLetra 0.5s ease forwards`;
+    span.style.animationDelay = `${index * 0.08}s`;
+
+    nome.appendChild(span);
+});
+
+// =========================
+// ANIMAÇÃO AO TROCAR DE SEÇÃO
+// =========================
+
+const secoesAnimadas = document.querySelectorAll(
+    "#sobre, #portfolio, #contatos"
+);
+
+const observadorSecoes = new IntersectionObserver(
+    function (entradas) {
+
+        entradas.forEach(function (entrada) {
+
+            if (entrada.isIntersecting) {
+
+                // Reinicia a animação
+                entrada.target.classList.remove("secao-visivel");
+
+                // Força o navegador a atualizar
+                void entrada.target.offsetWidth;
+
+                // Ativa novamente a animação
+                entrada.target.classList.add("secao-visivel");
+
+            } else {
+
+                // Quando sair da tela, prepara para animar novamente
+                entrada.target.classList.remove("secao-visivel");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+secoesAnimadas.forEach(function (secao) {
+
+    secao.classList.add("secao-animada");
+
+    observadorSecoes.observe(secao);
+
+});

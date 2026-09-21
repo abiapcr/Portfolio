@@ -39,6 +39,8 @@ body {
 #inicio{
     padding: 100px 80px;
     background-color: var(--fundo-1);
+    opacity: 1;
+    transform: none;
 }
 
 /* Título principal */
@@ -1089,5 +1091,127 @@ html{
 
     .botoes_contatos .contatos_descrição {
         font-size: 9px;
+    }
+}
+
+/* ================================================= */
+/* ANIMAÇÃO DE ENTRADA - INÍCIO */
+/* ================================================= */
+
+.titulo h1 {
+    animation: aparecerTitulo 1s ease-out forwards;
+}
+
+.descricao {
+    opacity: 0;
+    animation: aparecerDescricao 1s ease-out 0.3s forwards;
+}
+
+.botoes {
+    opacity: 0;
+    animation: aparecerBotoes 1s ease-out 0.6s forwards;
+}
+
+.imagem {
+    opacity: 0;
+    animation: aparecerImagem 1s ease-out 0.4s forwards;
+}
+
+
+/* Título */
+@keyframes aparecerTitulo {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Descrição */
+@keyframes aparecerDescricao {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Botões */
+@keyframes aparecerBotoes {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Foto */
+@keyframes aparecerImagem {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ================================================= */
+/* ANIMAÇÃO AO TROCAR DE SEÇÃO */
+/* ================================================= */
+
+section.secao-animada {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+section.secao-animada.secao-visivel {
+    animation: aparecerSecao 0.8s ease-out forwards;
+}
+
+@keyframes aparecerSecao {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* A seção inicial não participa dessa animação */
+#inicio {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes aparecerLetra {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
