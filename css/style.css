@@ -1178,17 +1178,17 @@ html{
 /* ================================================= */
 
 section.secao-animada {
-    opacity: 0;
-    transform: translateY(60px);
+    animation: nenhuma 0s;
 }
 
 section.secao-animada.secao-visivel {
-    animation: aparecerSecao 0.8s ease-out forwards;
+    animation: aparecerSecao 0.8s ease-out;
 }
 
 @keyframes aparecerSecao {
+
     from {
-        opacity: 0;
+        opacity: 0.3;
         transform: translateY(60px);
     }
 
@@ -1196,6 +1196,7 @@ section.secao-animada.secao-visivel {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 /* A seção inicial não participa dessa animação */
@@ -1214,4 +1215,14 @@ section.secao-animada.secao-visivel {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
 }
