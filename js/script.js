@@ -1,25 +1,4 @@
 // =========================
-// NAVBAR - ESCONDER AO DESCER
-// =========================
-
-let ultimaPosicao = 0;
-
-window.addEventListener("scroll", function () {
-    let posicaoAtual = window.scrollY;
-
-    if (posicaoAtual > ultimaPosicao) {
-        // Descendo
-        document.querySelector(".navbar").style.top = "-100px";
-    } else {
-        // Subindo
-        document.querySelector(".navbar").style.top = "0";
-    }
-
-    ultimaPosicao = posicaoAtual;
-});
-
-
-// =========================
 // NAVBAR - LINK ATIVO
 // =========================
 
@@ -139,14 +118,21 @@ botaoTema.addEventListener("click", function () {
 
 });
 
+
+// =========================
+// ANIMAÇÃO DO NOME
+// =========================
+
 const nome = document.querySelector(".titulo h1 span strong");
 
 const texto = nome.textContent;
+
 nome.textContent = "";
 
 nome.style.whiteSpace = "nowrap";
 
 texto.split("").forEach((letra, index) => {
+
     const span = document.createElement("span");
 
     span.textContent = letra === " " ? "\u00A0" : letra;
@@ -161,8 +147,9 @@ texto.split("").forEach((letra, index) => {
     nome.appendChild(span);
 });
 
+
 // =========================
-// ANIMAÇÃO AO TROCAR DE SEÇÃO
+// ANIMAÇÃO DAS SEÇÕES
 // =========================
 
 const secoesAnimadas = document.querySelectorAll(
@@ -178,7 +165,6 @@ const observadorSecoes = new IntersectionObserver(
 
                 entrada.target.classList.add("secao-visivel");
 
-                // Para de observar depois da primeira animação
                 observadorSecoes.unobserve(entrada.target);
 
             }
